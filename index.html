@@ -6,9 +6,26 @@
   </head>
   <body>  
     hello!
-    <!-- Install SDK -->
-    <script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.20/libs/cn/index.js"></script>
-    <script src="./index.js"></script>
+    
+<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.19/libs/cn/index.js"></script>
+<script>
+  new CozeWebSDK.WebChatClient({
+    config: {
+      bot_id: '7602164059265695750',
+    },
+    componentProps: {
+      title: 'Coze',
+    },
+    auth: {
+      type: 'token',
+      token: 'pat_VbnKxNJ9rnBMez3J1XumHRidYiR6Ox8wPWhBvbAA1TEE8a3DKKPS6ZbBFZuexwZn',
+      onRefreshToken: function () {
+        return 'pat_VbnKxNJ9rnBMez3J1XumHRidYiR6Ox8wPWhBvbAA1TEE8a3DKKPS6ZbBFZuexwZn'
+      }
+    }
+  });
+</script>
   </body>
 
 </html>
+
